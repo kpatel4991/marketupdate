@@ -1,0 +1,5 @@
+{
+  "name": "Market Update",
+  "description": "Real-time financial market analysis tool that simplifies complex economic data and tracks US futures using AI-powered search grounding.",
+  "requestFramePermissions": []
+}
