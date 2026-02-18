@@ -1,8 +1,8 @@
 
 import React, { useState, useCallback } from 'react';
-import MarketSectionCard from './components/MarketSectionCard';
-import { MarketSection, MarketUpdate } from './types';
-import { fetchMarketUpdate } from './services/geminiService';
+import MarketSectionCard from './components/MarketSectionCard.tsx';
+import { MarketSection, MarketUpdate } from './types.ts';
+import { fetchMarketUpdate } from './services/geminiService.ts';
 import { 
   LayoutDashboard, 
   Newspaper, 

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ExternalLink, Clock, AlertCircle } from 'lucide-react';
-import { MarketUpdate } from '../types';
+import { MarketUpdate } from '../types.ts';
 
 interface MarketSectionCardProps {
   id: string;
