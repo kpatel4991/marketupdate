@@ -3,6 +3,7 @@ export interface MarketUpdate {
   content: string;
   sources: { title: string; uri: string }[];
   timestamp: string;
+  error?: boolean;
 }
 
 export enum MarketSection {

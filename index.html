@@ -4,36 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Update</title>
+    <title>Market Pulse | AI Financial Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              brand: {
+                50: '#f0f4ff',
+                100: '#e0e9fe',
+                500: '#3b82f6',
+                600: '#2563eb',
+                900: '#1e3a8a',
+              }
+            }
+          }
+        }
+      }
+    </script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            scroll-behavior: smooth;
+            background-color: #020617;
+            color: #f8fafc;
+            -webkit-font-smoothing: antialiased;
         }
-        .mono {
-            font-family: 'JetBrains Mono', monospace;
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .shimmer {
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
         }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.4",
     "react-dom": "https://esm.sh/react-dom@^19.2.4",
     "react-dom/client": "https://esm.sh/react-dom@^19.2.4/client",
-    "react/": "https://esm.sh/react@^19.2.4/",
     "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
     "lucide-react": "https://esm.sh/lucide-react@^0.564.0?external=react",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
 </head>
 <body>
     <div id="root"></div>
-    <!-- Explicitly import the entry point to ensure execution -->
     <script type="module" src="index.tsx"></script>
 </body>
 </html>
